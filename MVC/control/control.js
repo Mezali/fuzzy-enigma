@@ -1,6 +1,10 @@
 $(document).ready(function () {
     $('.btn-send').click(function (e) {
         e.preventDefault();
-        alert("botão clicado")
+
+
+        let dados = $("#form").serialize();
+
+        console.log(dados);
     });
 });
