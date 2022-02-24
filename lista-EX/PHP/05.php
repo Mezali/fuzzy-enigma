@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 $num1 = 0;
 $num2 = 1;
 $n = $_REQUEST['numero'];

@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 $variavel01 = $_REQUEST['num1'];
 $variavel02 = $_REQUEST['num2'];
 

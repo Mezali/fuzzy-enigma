@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+
 $variavel = $_REQUEST['variavel'];
 
 $variavel %= 2;
