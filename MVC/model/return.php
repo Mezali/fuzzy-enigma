@@ -13,7 +13,7 @@ if (empty($NOME)) {
         case '1':
             $dados = array(
                 "tipo" => 'hiena.jpg',
-                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é o cachorro'
+                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é a hiena!'
        
             );
             break;
@@ -21,14 +21,14 @@ if (empty($NOME)) {
         case '2':
             $dados = array(
                 "tipo" => 'gato.png',
-                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é o gato'
+                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é o gato!'
             );
             break;
 
         case '3':
             $dados = array(
                 "tipo" => 'peixe.png',
-                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é o peixe'
+                "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é o peixe!'
             );
             break;
 
