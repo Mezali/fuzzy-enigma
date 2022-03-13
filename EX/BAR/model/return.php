@@ -2,18 +2,27 @@
 
 $NOME = $_REQUEST['NOME'];
 $BEBIDA = $_REQUEST['BEBIDA'];
-$IDADE = $_REQUEST['ANIMAL'];
+$NASC = ($_REQUEST['ANO']);
+$DataAtual = date("d/m/Y");
+$IDADE = date_diff(date_create($NASC), date_create($DataAtual));
 
-if ($IDADE >= 18) {
-        
-    "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia '
+echo $DataAtual;
 
+if (empty($NOME)) {
+    $dados = array(
+        "tipo" => 'error',
+        "mensagem" => 'Existe(m) campo(s) a ser(em) preenchido(s).'
+    );
+} else {
+    if ($IDADE >= 18) {
+        $dados = array(
+            "mensagem" => 'Bem vindo, ' . $NOME . ', A sua bebida favorita é: '. $BEBIDA
+        );
+    }else{
+        $dados = array(
+            "mensagem" => 'você não deveria estar aqui! ' . $NOME . ' você é de menor!'
+        );
+    }
 }
 
-    
-    $dados = array(
-        "tipo" => 'hiena.jpg',
-        "mensagem" => 'Bem vindo, '.$NOME.', Sabemos que o seu animal de preferencia é a hiena!'
-
-    );
-    echo json_encode($dados);
+echo json_encode($dados);
