@@ -16,7 +16,18 @@ $(document).ready(function () {
             assync: true,
             data: dados,
             url: "../model/return.php",
-            success: function () {
+            success: function (dados) {
+                $('#retorno').append(`
+                    <div id="retorno" class="row justify-content-center">
+                        <div class="col-13 col-sm-8 col-md-6">
+                            <div class="${dados.B4}">
+                                <h1 class="text-center text-dark">
+                                    ${dados.mensagem}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>               
+               `);
             }
         });
     });
