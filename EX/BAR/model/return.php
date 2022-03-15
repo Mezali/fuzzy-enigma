@@ -12,6 +12,7 @@ $IDADE = date_diff(date_create($NASC), date_create($DataAtual));
 
 if (empty($NOME)) {
     $dados = array(
+        "B4" => 'alert-danger',
         "mensagem" => 'Existe(m) campo(s) a ser(em) preenchido(s).'
     );
 } else {
