@@ -10,22 +10,12 @@ $IDADE = date_diff(date_create($NASC), date_create($DataAtual));
 //echo 'Idade é '.$IDADE->format('%y');
 //echo $DataAtual;
 
-if (empty($NOME)) {
+if (empty($NOME) && empty($BEBIDA) && empty($NASC)) {
     $dados = array(
-        "B4" => 'alert-danger',
-        "mensagem" => 'INSIRA O SEU NOME!'
-    );
-} else if (empty($IDADE)) {
-    $dados = array(
-        "B4" => 'alert-danger',
-        "mensagem" => 'INSIRA A DATA DE NASCIMENTO'
-    );
-} elseif (empty($BEBIDA)) {
-    $dados = array(
-        "B4" => 'alert-danger',
-        "mensagem" => 'INSIRA A SUA BEBIDA FAVORITA!'
+        "mensagem" => 'Existe(m) campo(s) a ser(em) preenchido(s).'
     );
 } else {
+
     if ($IDADE->format('%y') >= 18) {
         $dados = array(
             "B4" => 'alert-success',
@@ -37,6 +27,7 @@ if (empty($NOME)) {
             "mensagem" => 'você não deveria estar aqui! ' . $NOME . ', você é de menor!'
         );
     }
+
 }
 
 echo json_encode($dados);
