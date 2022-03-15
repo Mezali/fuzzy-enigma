@@ -4,7 +4,7 @@ $NOME = $_REQUEST['NOME'];
 $BEBIDA = $_REQUEST['BEBIDA'];
 $NASC = $_REQUEST['ANO'];
 $DataAtual = date("Y-m-d");
-$IDADE = date_diff(date_create($NASC), date_create($hoje));
+$IDADE = date_diff(date_create($NASC), date_create($DataAtual));
 
 
 //echo 'Idade é '.$IDADE->format('%y');
